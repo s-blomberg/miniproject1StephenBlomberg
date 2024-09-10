@@ -16,9 +16,11 @@ for ticker in mytickers:
     mydata[ticker] = {'ticker': ticker,
                       'dayHigh': result.info['dayHigh']}
 
-    print(f"Ticker: {ticker} \t Daily High: {result.info['dayHigh']}")
+pprint.pprint(mydata)
+
+    #print(f"Ticker: {ticker} \t Daily High: {result.info['dayHigh']}")
     
-msft = yf.Ticker("MSFT")
+#msft = yf.Ticker("MSFT")
 
 # get all stock info
 #msft.info
