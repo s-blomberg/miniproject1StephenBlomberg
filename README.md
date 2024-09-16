@@ -1,5 +1,5 @@
 ### INF601 - Advanced Programming in Python
-### Jane Doe
+### Stephen Blomberg
 ### Mini Project 1
 
 
