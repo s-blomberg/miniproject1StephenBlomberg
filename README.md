@@ -3,13 +3,13 @@
 ### Mini Project 1
 
 
-# Project Title
+# Mini Project 1
 
-Simple overview of use/purpose.
+This project will be using the packages NumPy and Matplotlib in order to create 5 graphs that output as PNG files.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Based on the stock tickers provided, it will graph the previous 10 trading days.
 
 ## Getting Started
 
