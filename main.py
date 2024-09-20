@@ -4,31 +4,28 @@
 
 import yfinance as yf
 import pprint
+from datetime import datetime, timedelta
+import numpy as np
+import matplotlib.pyplot as plt
+
+#Get today's date
+today = datetime.now()
+
+#Calculate the date 10 days ago
+ten_days_ago = today - timedelta(days=15)
+
+print("Today's date:", today.strftime("%Y-%m-%d"))
+print("Date 10 days ago:", ten_days_ago.strftime("%Y-%m-%d"))
 
 mytickers = ["MSFT", "AAPL", "NVDA", "GME", "AMC"]
-
-mydata = {}
-
 mytickers.sort()
 
 for ticker in mytickers:
     result = yf.Ticker(ticker)
-    mydata[ticker] = {'ticker': ticker,
-                      'dayHigh': result.info['dayHigh']}
-
-pprint.pprint(mydata)
-
-    #print(f"Ticker: {ticker} \t Daily High: {result.info['dayHigh']}")
-    
-#msft = yf.Ticker("MSFT")
-
-# get all stock info
-#msft.info
-
-#pprint.pprint(msft.info)
-
-# get historical market data
-#hist = msft.history(period="5d", interval="1d")
-#hist = msft.history(start=2024-8-27, end=2024-9-10)
-
-#pprint.pprint(hist)
+    hist = result.history(start=ten_days_ago, end=today)
+    last10days = []
+    for date in hist['Close'][:11]:
+        last10days.append(date)
+    myarray = np.array(last10days)
+    plt.plot(myarray)
+    plt.show()
