@@ -24,8 +24,14 @@ for ticker in mytickers:
     result = yf.Ticker(ticker)
     hist = result.history(start=ten_days_ago, end=today)
     last10days = []
-    for date in hist['Close'][:11]:
+    for date in hist['Close'][:10]:
         last10days.append(date)
-    myarray = np.array(last10days)
-    plt.plot(myarray)
-    plt.show()
+    if len(last10days) == 10:
+        myarray = np.array(last10days)
+        plt.plot(myarray)
+        plt.xlabel('Days Ago')
+        plt.ylabel('Closing Price')
+        plt.title(f"{ticker} Last 10 Trading Days")
+        plt.show()
+    else:
+        print(f"Do not have 10 days of data to plot. Only have {len(last10days)} days.")
