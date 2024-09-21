@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
+#Checks for charts folder to place pictures into.
 os.makedirs("charts", exist_ok=True)
 
 #Get today's date
@@ -16,13 +17,12 @@ today = datetime.now()
 #Calculate the date 10 days ago
 ten_days_ago = today - timedelta(days=15)
 
-print("Today's date:", today.strftime("%Y-%m-%d"))
-print("Date 10 days ago:", ten_days_ago.strftime("%Y-%m-%d"))
+#List of personal tickers
+myTickers = ["SPY", "AMD", "NVDA", "GME", "KOSS"]
+myTickers.sort()
 
-mytickers = ["SPY", "AMD", "NVDA", "GME", "KOSS"]
-mytickers.sort()
-
-for ticker in mytickers:
+#Loops through each ticker in the list and creates the graphs
+for ticker in myTickers:
     result = yf.Ticker(ticker)
     hist = result.history(start=ten_days_ago, end=today)
     last10days = []

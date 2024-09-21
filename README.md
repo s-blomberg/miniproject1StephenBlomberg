@@ -1,15 +1,13 @@
-### INF601 - Advanced Programming in Python
-### Stephen Blomberg
-### Mini Project 1
+#### INF601 - Advanced Programming in Python
+#### Stephen Blomberg
+#### Mini Project 1
 
 
 # Mini Project 1
 
-This project will be using the packages NumPy and Matplotlib in order to create 5 graphs that output as PNG files.
-
 ## Description
 
-Based on the stock tickers provided, it will graph the previous 10 trading days.
+This project will be using the packages NumPy and Matplotlib in order to create 5 graphs that output as PNG files.
 
 ## Getting Started
 
@@ -19,25 +17,15 @@ Based on the stock tickers provided, it will graph the previous 10 trading days.
 pip install -r requirement.txt
 ```
 
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
 ```
-code blocks for commands
+python main.py
 ```
 
-## Help
+### Output
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+This program should create 5 .png graphs in the charts folder.
 
 ## Authors
 
@@ -46,8 +34,7 @@ Stephen Blomberg
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [y-finance](https://pypi.org/project/yfinance)
+* [matplotlib](https://matplotlib.org/stable/tutorials/pyplot.html)
+* [ChatGPT](https://chatgpt.com/share/66ee2839-159c-8002-8020-aaff406360b1)
+* [Jason Zeller](https://www.youtube.com/@profzeller)
