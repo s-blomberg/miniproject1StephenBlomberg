@@ -19,7 +19,7 @@ ten_days_ago = today - timedelta(days=15)
 print("Today's date:", today.strftime("%Y-%m-%d"))
 print("Date 10 days ago:", ten_days_ago.strftime("%Y-%m-%d"))
 
-mytickers = ["MSFT", "AAPL", "NVDA", "GME", "AMC"]
+mytickers = ["SPY", "AMD", "NVDA", "GME", "KOSS"]
 mytickers.sort()
 
 for ticker in mytickers:
